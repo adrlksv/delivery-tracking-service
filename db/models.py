@@ -20,9 +20,9 @@ class Order(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     
-    def __repr__(Base):
-        return f"<Order(order_id={self.order_id}, status='{self.status}',
-                 location='{self.location}')>"
+    def __repr__(self):
+        return f"""<Order(order_id={self.order_id}, status='{self.status}',
+                 location='{self.location}')>"""
     
     def to_dict(self):
         return {
